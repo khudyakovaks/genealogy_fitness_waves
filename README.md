@@ -33,9 +33,9 @@ The user needs to specify the following parameters of the simulation by editing 
   * `mus` - a list of mutation rates
   
 There is an option to specify additional parameters in the same file:
-  * 'n_replicates' - number of independent runs of the simulation. Increasing the number of replicates decreases the noisiness of the outcome, but increases the run time
-  * 'n_gen' - number of generations for the forward simulation to run. We recommend setting it to '5N' generations to ensure that all lineages present in the last generation originate from one ancestral individual
-  * 'proportion_sampled' - sample size to compute <T_k> = proportion_sampled*N. The genealogy trees are highly noisy, so sampling too many times from the same tree biases the statistics. At the same time, sampling from the same tree several times allows to decrease the number of independent runs. Through trial and error, we found that setting this parameter to '1' (i.e., sampling 'N' pairs, triplets, and quadruples) leads to good results.
+  * `n_replicates` - number of independent runs of the simulation. Increasing the number of replicates decreases the noisiness of the outcome, but increases the run time
+  * `n_gen` - number of generations for the forward simulation. We recommend setting it to `5N` generations to ensure that all lineages present in the last generation originate from one ancestral individual
+  * `proportion_sampled` - sample size to compute <T_k> = proportion_sampled*N. The genealogy trees are highly noisy, so sampling too many times from the same tree biases the statistics. At the same time, sampling from the same tree several times allows to reduce the number of independent runs. Through trial and error, we found that setting this parameter to `1` (i.e., sampling `N` pairs, triplets, and quadruples) leads to good results.
 
 **2) Run `run_simulation.py`**
 
