@@ -39,7 +39,7 @@ There is an option to specify additional parameters in the same file:
 
 **2) Run `run_simulation.py`**
 
-The output of the run is three '*.npy' files: the estimated average time to coalescence of 2, 3, and 4 individuals.
+The output of the run is three `*.npy` files: the estimated average time to coalescence of 2, 3, and 4 individuals.
 
 **3) Plot the figures**
 
