@@ -22,7 +22,7 @@ Keeping track of the genealogies is computationally heavy, and to perform the ru
 
 **Installation:**
 
-`git clone https://github.com/khudyakovaks/fitness_waves`
+`git clone https://github.com/khudyakovaks/genealogy_fitness_waves`
 
 ## Usage:
 **1) Specify the parameters**
