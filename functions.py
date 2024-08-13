@@ -6,8 +6,8 @@ def mutation(mu, population):
     """give each individual a number of new mutations distributed as Poisson(mu)"""
     N = len(population)
     mutations = np.random.poisson(mu, N)
-    pop = population + mutations
-    return pop
+
+    return population + mutations
 
 
 def selection_rand_drift_asexual(pop, s, ancestry, g):
@@ -20,12 +20,12 @@ def selection_rand_drift_asexual(pop, s, ancestry, g):
     # proportional to fitness
     next_gen = pop[parents_indices]  # children inherit parent's number of mutations
     ancestry[:, g] = parents_indices  # keep track of the identifier of the parents
+
     return next_gen, ancestry
 
 
 def mean_fitness(s, pop):
     """"compute fitnesses of all individuals"""
-    N = len(pop)
     fitnesses = (1 + s) ** (pop)  # fitness is (1+s) to the power of the number of mutations
 
     return fitnesses

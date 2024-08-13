@@ -44,30 +44,6 @@ alphas_T4T2_dataframe = pd.DataFrame(alphas_T4T2, columns=np.around(mus, 3), ind
 ses_to_give_gammas_one_half = 2 * mus / (np.log(mus * N))  # Г = 1/2 line
 ses_to_give_gammas_one = mus / (np.log(mus * N))  # Г = 1 line
 
-# ------------------------------------------------------------------------------
-T3T2 = pd.DataFrame((5 / 4) - (T3s / T2s), columns=np.around(mus, 3), index=np.around(ses, 3))
-T4T2 = pd.DataFrame((25 / 18) - (T4s / T2s), columns=np.around(mus, 3), index=np.around(ses, 3))
-T2_df = pd.DataFrame(T2s, columns=np.around(mus, 3), index=np.around(ses, 3))
-
-fig, ax = plt.subplots(figsize=(20, 12))
-# colormap = sns.color_palette("Greens")
-# colormap = sns.color_palette("colorblind", 10)
-colormap = sns.color_palette("coolwarm", n_colors=10)
-ax = sns.heatmap(T3T2, linewidth=0.5, cmap=colormap, robust=True, center=0.0)
-
-plt.ylabel(r'$s$', fontsize=35)
-plt.xlabel(r'$\mu$', fontsize=35)
-plt.title(r"Distance to BS ratios of <$T_3$> / <$T_2$>, N = %i" % N, fontsize=35)
-'''plt.savefig('Heatmap_T3T2_mu_vs_s_N{}_n_gen{}_n_replicates{}_proportion_sampled_{}_zoomin.png'.format(N, n_gen, n_replicates,
-                                                                                               proportion_sampled))
-'''
-plt.savefig(
-    'Heatmap_T3T2_mu_vs_s_N{}_n_gen{}_n_replicates{}_proportion_sampled_{}_smaller_s_interval.png'.format(N, n_gen,
-                                                                                                          n_replicates,
-                                                                                                          proportion_sampled))
-
-# ------------------------------------------------------------------------------
-
 # 7. plot the heatmap of alpha values inferred from <T3>/<T2>, together with two critical Г lines
 fig, ax = plt.subplots(figsize=(20, 12))
 ax = sns.heatmap(alphas_dataframe, linewidth=0.5, cmap=colormap, center=1.1, robust=True)
